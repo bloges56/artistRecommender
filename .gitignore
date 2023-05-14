@@ -5,7 +5,7 @@
 
 
 
-/venv-flask-server
+venv-flask-server/
 
 *.env
 
