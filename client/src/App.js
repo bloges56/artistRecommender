@@ -6,7 +6,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch("/members").then(
+    fetch("/recommender").then(
       res => res.json()
     ).then(
       data => {
@@ -18,11 +18,11 @@ function App() {
 
   return(
     <div>
-      {(typeof data.members === 'undefined') ? (
+      {(typeof data.artists === 'undefined') ? (
         <p>Loading...</p>
       ): (
-        data.members.map((member, i) => (
-          <p key={i}>{member}</p>
+        data.artists.map((artist, i) => (
+          <p key={i}>{artist}</p>
         ))
       )}
     </div>
